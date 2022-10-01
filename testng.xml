@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Vilen_Taratula_Lviv_HT4" parallel="tests" thread-count="4">
+
+    <test name="Tests_On_Chrome" parallel="classes" thread-count="1">
+
+        <classes>
+            <class name="CorrectUrlTest">
+                <parameter name="browser" value="chrome"/>
+            </class>
+                       <class name="CheckChangedLanguageTest">
+                <parameter name="browser" value="chrome"/>
+            </class>
+            <class name="CheckTitleTest">
+                <parameter name="browser" value="chrome"/>
+            </class>
+            <class name="CheckCartTest">
+                <parameter name="browser" value="chrome"/>
+            </class>
+        </classes>
+    </test>
+    <test name="Tests_On_MicrosoftEdge" parallel="classes" thread-count="1">
+
+        <classes>
+            <class name="CorrectUrlTest">
+                <parameter name="browser" value="MicrosoftEdge"/>
+            </class>
+            <class name="CheckChangedLanguageTest">
+                <parameter name="browser" value="MicrosoftEdge"/>
+            </class>
+            <class name="CheckTitleTest">
+                <parameter name="browser" value="MicrosoftEdge"/>
+            </class>
+            <class name="CheckCartTest">
+                <parameter name="browser" value="MicrosoftEdge"/>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Tests_On_Firefox" parallel="classes" thread-count="1">
+        <classes>
+            <class name="CorrectUrlTest">
+                <parameter name="browser" value="firefox"/>
+            </class>
+            <class name="CheckChangedLanguageTest">
+                <parameter name="browser" value="firefox"/>
+            </class>
+            <class name="CheckTitleTest">
+                <parameter name="browser" value="firefox"/>
+            </class>
+            <class name="CheckCartTest">
+                <parameter name="browser" value="firefox"/>
+            </class>
+        </classes>
+    </test>
+    <test name="Tests_On_Opera" parallel="classes" thread-count="1">
+        <parameter name="browser" value="opera"/>
+        <classes>
+            <class name="CorrectUrlTest">
+                <parameter name="browser" value="opera"/>
+            </class>
+            <class name="CheckChangedLanguageTest">
+                <parameter name="browser" value="opera"/>
+            </class>
+            <class name="CheckTitleTest">
+                <parameter name="browser" value="opera"/>
+            </class>
+            <class name="CheckCartTest">
+                <parameter name="browser" value="opera"/>
+                <methods>
+                    <parameter name="browser" value="opera"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+</suite>
